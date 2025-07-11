@@ -1,6 +1,6 @@
 let handler = async (m, { conn }) => {
-  let name = 'Ado'
-  let number = '50493732693' // sin @ ni nada
+  let name = 'ᴅᴀɴɪ'
+  let number = '18493907272' // sin @ ni nada
 
   // Crear vCard de contacto
   let vcard = `
@@ -27,11 +27,11 @@ END:VCARD
   // Enviar mensaje adicional elegante
   await conn.sendMessage(m.chat, {
     text: `
-━━ 👑 *Creador del Bot* 👑 ━━
+━━ 𝙄𝙉𝙁𝙊 𝘿𝙀 𝙈𝙄 𝘾𝙍𝙀𝘼𝘿𝙊𝙍 👨🏻‍💻 ━━
 
-📛 *Nombre:* ${name}
-📞 *Número:* wa.me/${number}
-🛠️ *Proyecto:* Bot de WhatsApp desde 0
+📝 *Nombre:* ${name}
+📲 *Número:* wa.me/${number}
+🔰 *Proyecto:* Bot de WhatsApp desde 0
 
 📬 Puedes escribirle si necesitas ayuda o soporte técnico.
 `.trim()
