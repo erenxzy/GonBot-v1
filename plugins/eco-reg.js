@@ -77,14 +77,14 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 
   if (reinoEspiritual) {
     const mensajeNotificacion = `
-☄︎✦❀ 〘 *Nuevo Registro* 〙❀✦☄︎
+ 〘 *Nuevo Registro* 
 
-☄︎ Nombre: *${name}*
-☁︎ Edad: *${age}*
-✦ ID: *${sn}*
-✦ Fecha: *${moment().format('YYYY-MM-DD HH:mm:ss')}*
+➪ 𝙉𝙊𝙈𝘽𝙍𝙀 : *${name}*
+➪ 𝙀𝘿𝘼𝘿: *${age}*
+➪ 𝙄𝘿: *${sn}*
+➪ 𝙁𝙀𝘾𝙃𝘼: *${moment().format('YYYY-MM-DD HH:mm:ss')}*
 
-❀ Recompensas ❀
+ 𝙍𝙀𝘾𝙊𝙈𝙋𝙀𝙉𝙎𝘼𝙎 ☕︎
 ${moneda}: *+46*`.trim()
 
     try {
