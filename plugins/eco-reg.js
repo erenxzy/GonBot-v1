@@ -9,7 +9,7 @@ const Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 
 let handler = async function (m, { conn, text, usedPrefix, command }) {
   const who = m.mentionedJid?.[0] || (m.fromMe ? conn.user.jid : m.sender)
-  const pp = await conn.profilePictureUrl(who, 'image').catch(() => 'https://files.catbox.moe/xr2m6u.jpg')
+  const pp = await conn.profilePictureUrl(who, 'image').catch(() => 'https://files.catbox.moe/04ujgk.jpg')
   const user = global.db.data.users[m.sender]
   const name2 = await conn.getName(m.sender)
   const fecha = moment().tz('America/Tegucigalpa').toDate()
@@ -23,10 +23,10 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 
   if (user.registered) {
     return m.reply(
-      `🔒 Ya estás registrado
+      `🔒 𝙔𝘼 𝙀𝙎𝙏𝘼𝙎 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝘼𝘿𝙊 𝙀𝙉 𝙈𝙄 𝘽𝘼𝙎𝙀 𝘿𝙀 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝙊 📄
 
 ¿Deseas reiniciar tu registro?
-➤ Usa: ${usedPrefix}unreg para eliminar tu registro actual`
+➪ Usa: ${usedPrefix}unreg para eliminar tu registro actual`
     )
   }
 
@@ -34,20 +34,20 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
     return m.reply(
       `❗ Formato incorrecto
 
-➤ Usa: ${usedPrefix + command} nombre.edad
-➤ Ejemplo: ${usedPrefix + command} ${name2}.18`
+➪ Usa: ${usedPrefix + command} nombre.edad
+➪ Ejemplo: ${usedPrefix + command} ${name2}.18`
     )
   }
 
   let [_, name, __, age] = text.match(Reg)
 
-  if (!name) return m.reply('⚠️ El nombre no puede estar vacío')
-  if (!age) return m.reply('⚠️ La edad es obligatoria')
-  if (name.length >= 100) return m.reply('⚠️ El nombre es demasiado largo')
+  if (!name) return m.reply('⚠︎ El nombre no puede estar vacío')
+  if (!age) return m.reply('⚠︎ La edad es obligatoria')
+  if (name.length >= 100) return m.reply('⚠︎ El nombre es demasiado largo')
 
   age = parseInt(age)
-  if (age > 1000) return m.reply('⚠️ Edad no válida')
-  if (age < 13) return m.reply('⚠️ Debes tener al menos 13 años para registrarte')
+  if (age > 1000) return m.reply('⚠︎ Edad no válida')
+  if (age < 13) return m.reply('⚠︎ Debes tener al menos 13 años para registrarte')
 
   user.name = name.trim()
   user.age = age
@@ -60,13 +60,12 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   const sn = createHash('md5').update(m.sender).digest('hex').slice(0, 20)
 
   const certificadoPacto = `
-✩*⢄⢁✧ --------- ✧⡈⡠*✩
-❐ *Registro exitoso* ❐
+❐ 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝙊 𝘾𝙊𝙉 𝙀𝙓𝙄𝙏𝙊  ❐
 
-✐ Nombre: *${name}*
-✐ Edad: *${age}*
-✐ ID único: *${sn}*
-✐ Fecha: *${fecha.toLocaleDateString()}*
+➪ 𝙉𝙊𝙈𝘽𝙍𝙀 : *${name}*
+➪ 𝙀𝘿𝘼𝘿: *${age}*
+➪ 𝙏𝙐 𝙄𝘿 𝙐𝙉𝙄𝘾𝙊: *${sn}*
+➪ 𝙁𝙀𝘾𝙃𝘼: *${fecha.toLocaleDateString()}*
 `.trim()
 
   await m.react('✅')
