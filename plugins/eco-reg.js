@@ -35,7 +35,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
       `❗ Formato incorrecto
 
 ➪ Usa: ${usedPrefix + command} nombre.edad
-➪ Ejemplo: ${usedPrefix + command} ${name2}.18`
+➪ Ejemplo: ${usedPrefix + command} ${name2}.16`
     )
   }
 
