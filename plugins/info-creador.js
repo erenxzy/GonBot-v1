@@ -31,7 +31,7 @@ END:VCARD
 
 📝 *Nombre:* ${name}
 📲 *Número:* wa.me/${number}
-🔰 *Proyecto:* Bot de WhatsApp desde 0
+🔰 *Proyecto:* Modificador De Bots De WhatsApp Y Creador De Webs Y más 
 
 📬 Puedes escribirle si necesitas ayuda o soporte técnico.
 `.trim()
