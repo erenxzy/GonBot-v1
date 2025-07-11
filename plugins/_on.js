@@ -130,8 +130,8 @@ handler.before = async (m, { conn }) => {
     if (m.messageStubType === 27) {
       const txtWelcome = '𝘽𝙄𝙀𝙉𝙑𝙀𝙉𝙄𝘿𝙊/𝘼'
       const bienvenida = `
-☕︎ *Bienvenid@* a *${groupMetadata.subject}*   
-➪ ${userMention}, qué gusto :D 
+☕︎ *Bienvenid@* a ${groupMetadata.subject}   
+➪ ${userMention}, espero que te agrade el grupo 😄
 ✦ Ahora somos *${groupSize}*    
 > ᴘᴜᴇᴅᴇs ᴜsᴀʀ .ʜᴇʟᴘ ᴘᴀʀᴀ ᴠᴇʀ ʟᴀ ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏ 
 `.trim()
@@ -146,9 +146,9 @@ handler.before = async (m, { conn }) => {
     if (m.messageStubType === 28 || m.messageStubType === 32) {
       const txtBye = '𝘼𝘿𝙄𝙊𝙎/𝘽𝙔𝙀'
       const despedida = `
-☕︎ *Adiós* de *${groupMetadata.subject}*   
+☕︎ *Adiós* de ${groupMetadata.subject}   
 ➪ ${userMention}, vuelve pronto シ︎ 
-✦ Somos *${groupSize}* aún.  
+✦ Somos *${groupSize}* 
 > ᴘᴜᴇᴅᴇs ᴜsᴀʀ .ʜᴇʟᴘ ᴘᴀʀᴀ ᴠᴇʀ ʟᴀ ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏ 
 `.trim()
 
