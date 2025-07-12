@@ -1,4 +1,4 @@
-console.log('Michi Wa Bot ...')
+console.log('GonBot ...')
 
 import { join, dirname } from 'path'
 import { createRequire } from 'module'
