@@ -48,7 +48,7 @@ const handler = async (m, { conn, text }) => {
 
   const caption = [
     "━━━━━━━━❪📥❫━━━━━━━━",
-    "乂  P L A Y  -  Y O U T U B E",
+    "🎵 P L A Y  -  Y O U T U B E",
     "",
     `⟩ *${title}*`,
     `> 📺 Canal › *${author.name}*`,
