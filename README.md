@@ -37,11 +37,11 @@ termux-setup-storage
 ```
 
 ```bash
-git clone https://github.com/El-brayan502/NagiBotV3
+git clone https://github.com/erenxzy/GonBot-v1
 
 ```
 ```bash
-cd NagiBotV2
+cd GonBot-v1
 ```
 ```bash
 npm install
