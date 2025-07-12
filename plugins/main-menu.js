@@ -3,11 +3,21 @@ const handler = async (m, { conn }) => {
     const name = await conn.getName(m.sender)
     const date = new Date().toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'numeric' })
     const uptime = clockString(process.uptime() * 1000)
-    const nombreBot = global.namebot || 'Bot'
+    const nombreBot = global.namebot || 'ɢᴏɴʙᴏᴛ-ᴠ1'
     const tipo = conn.user?.jid?.includes('3147172161') ? 'Bot Principal 🟢' : 'Sub Bot 🟡'
-    const bannerURL = 'https://cdn.russellxz.click/0e418398.png' // Cambia esta URL si deseas
+    const bannerURL = 'https://cdn.russellxz.click/0e418398.png' // URL del banner
+
+    let header = `
+┏━━━━━━━━━━━━━━━━━━┓
+┃  🤖 *${nombreBot}* [ ${tipo} ]
+┃  👤 𝙃𝙤𝙡𝙖, *${name}*
+┃  ⏱️ 𝘼𝙘𝙩𝙞𝙫𝙤 𝙃𝙖𝙘𝙚: *${uptime}*
+┃  📅 𝙁𝙚𝙘𝙝𝙖: *${date}*
+┗━━━━━━━━━━━━━━━━━━┛`.trim()
 
     let text = `
+${header}
+
 ── ⬤𝙈𝙀𝙉𝙐 𝘿𝙀 𝘾𝙊𝙈𝘼𝙉𝘋𝙊⬤ ──
 
 ╭─「 🔰 𝙎𝙐𝘽-𝘽𝙊𝙏𝙎 」
@@ -64,6 +74,7 @@ const handler = async (m, { conn }) => {
 ╰───────────────
 
 ╭─「 🎲 𝙂𝘼𝘾𝙃𝘼 𝘼𝙉𝙄𝙈𝙀 」
+│ ✎ .infoanime
 │ ✎ .c  
 │ ✎ .harem < @usuario >  
 │ ✎ .rw  
@@ -84,8 +95,7 @@ const handler = async (m, { conn }) => {
 │ ✎ .imagen *<búsqueda>*  
 │ ✎ .pinterest  
 │ ✎ .tiktoksearch  
-│ ✎ .yts
-│ ✎ .animeinfo  
+│ ✎ .yts  
 ╰───────────────
 
 ╭─「 🖼️ 𝙎𝙏𝙄𝘾𝙆𝙀𝙍 」
