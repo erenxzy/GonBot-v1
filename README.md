@@ -1,4 +1,4 @@
-<h1 align="center">𝙂𝙤𝙣𝘽𝙤𝙩-𝗩1✰</h1>
+<h1 align="center">𝙂𝙤𝙣𝘽𝙤𝙩-𝗩1</h1>
 
 ---
 
