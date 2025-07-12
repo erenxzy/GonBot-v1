@@ -30,58 +30,26 @@
 <a
 href="https://www.mediafire.com/file/3hsvi3xkpq3a64o/termux_118.a"><img src="https://qu.ax/finc.jpg" height="125px"></a>
 
-### **`➮ Instalación por termux`**
+## 🚀 Instalación Rápida
 
-<details>
- <summary><b> ✎ Click para ver los Comandos </b></summary>
-
-### **❀ Instalación manual por termux**
-> Nota: Copie y pegue los comandos en termux uno por uno.
 ```bash
 termux-setup-storage
 ```
 
 ```bash
-apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
-```
+git clone https://github.com/El-brayan502/NagiBotV3
 
+```
 ```bash
-git clone https://github.com/The-King-Destroy/Yuki_Suou-Bot && cd Yuki_Suou-Bot
+cd NagiBotV2
 ```
-
-```bash
-yarn install
-```
-
 ```bash
 npm install
 ```
 
 ```bash
-npm update
-```
-
-```bash
 npm start
 ```
-
-> Si aparece (Y/I/N/O/D/Z) [default=N] ? use la letra "y" + "ENTER" para continuar con la instalación
-
-### **🜸 Activar en caso de detenerse en termux**
-
-> Si después de instalar el bot en Termux se detiene (pantalla en blanco, pérdida de conexión a Internet, reinicio del dispositivo), sigue estos pasos:
-
-❒ Abre Termux y navega al directorio del bot:
-   
-   ```bash
-    cd Yuki_Suou-Bot
-   ```
-
-❒ Inicia el bot nuevamente:
-  
-   ```bash
-    npm start
-   ```
 ---
 
 # *Comunidad*
