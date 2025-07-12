@@ -66,7 +66,7 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
     let bannerFinal = 'https://cdn.russellxz.click/0e418398.png'
 
     const botActual = conn.user?.jid?.split('@')[0].replace(/\D/g, '')
-    const tipo = botActual === '+573147172161'.replace(/\D/g, '') ? 'Bot Principal 🟢' : 'Sub Bot 🟡'
+    const tipo = botActual === '+573147172161'.replace(/\D/g, '') ? 'Bot Principal 🟢' : 
     const menuConfig = conn.menu || defaultMenu
 
     const _text = [
