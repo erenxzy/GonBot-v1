@@ -1,27 +1,24 @@
-<h1 align="center">✰ Kirito Bot MD ✰</h1>
+<h1 align="center">𝙂𝙤𝙣𝘽𝙤𝙩-𝗩1✰</h1>
 
 ---
 
 <p align="center">
-  <img src="https://files.catbox.moe/hnif5j.jpg" alt="Kirito Bot MD Logo">
+  <img src="https://files.catbox.moe/zgqzfy.jpg" alt="GonBot Logo">
 </p>
 
 ---
 
-# *Acerca de Kirito Bot MD*
+# *Mas Info De GonBotv1*
 
-> Un bot de WhatsApp potente y versátil, inspirado en el universo de Sword Art Online. Desarrollado para ofrecer una experiencia ágil, segura y funcional.
+> Bot inspirado Por Un Anime Y tambiém Por mis coloboradores Súper bot Actualizado Para WhatsApp 2025.
 
-*   *Desarrollador:* Deylin Eliac
+*   *Desarrollador:* erenxzy
 *   *Plataforma:* WhatsApp
-*   *Inspiración:* Sword Art Online
-*   *Características Clave:* Agilidad, Funcionalidad, Seguridad
+*   *Inspiración:* Hunter × Hunter
+*   *Características Clave:* Aventurero, optimista y muy decidido.
 
 ---
 
-## *Licencia*
-
-Este proyecto se distribuye bajo la [Licencia Pública General GNU Affero v3](./LICENSE).
 
 ---
 
@@ -77,7 +74,7 @@ href="https://www.mediafire.com/file/3hsvi3xkpq3a64o/termux_118.a"><img src="htt
 
 # *Comunidad*
 
-*   *Canal Oficial de WhatsApp:* [Únete aquí 👑](https://whatsapp.com/channel/0029VawF8fBBvvsktcInIz3m)
+*   *Canal Oficial de WhatsApp:* [Únete aquí 👑](https://whatsapp.com/channel/0029VbBBn9R4NViep4KwCT3Z)
 
 ---
 
