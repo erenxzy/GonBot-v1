@@ -10,13 +10,13 @@ import cfonts from 'cfonts'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const require = createRequire(__dirname)
 
-cfonts.say('The - Michi\nWa', {
+cfonts.say('The - Proyect GonBot', {
   font: 'block',
   align: 'center',
   gradient: ['whiteBright', 'white']
 })
 
-cfonts.say('Bot Multi Device', {
+cfonts.say('GonBot-V1', {
   font: 'simple',
   align: 'center',
   gradient: ['red', 'white']
