@@ -29,19 +29,19 @@ let handler = async (m, { conn }) => {
   const formatUptime = clockString(uptime)
   const totalUsers = uniqueUsers.size
 
-  let txt = `❀ *Subs Activos de Michi-Wa* ✦\n\n`
+  let txt = `✦ *Subs Activos de GonBot* ✦\n\n`
   txt += `> ✦ *Tiempo activo:* ${formatUptime}\n`
   txt += `> ✦ *Subs conectados:* ${totalUsers}\n`
 
   if (totalUsers > 0) {
-    txt += `\n❀ *Lista de Subs Conectados:* ✦\n\n`
+    txt += `\n✦ *Lista de Subs Conectados:* ✦\n\n`
     let i = 1
     for (const [jid, nombre] of uniqueUsers) {
       const numero = jid.split('@')[0]
-      txt += `✦ *${i++}.* ${nombre}\n> ❀ wa.me/${numero}\n\n`
+      txt += `✦ *${i++}.* ${nombre}\n> ✦ wa.me/${numero}\n\n`
     }
   } else {
-    txt += `\n> ❀ No hay subbots conectados por ahora.`
+    txt += `\n> 🗣️ No hay subbots conectados por ahora.`
   }
 
   await conn.reply(m.chat, txt.trim(), m)
