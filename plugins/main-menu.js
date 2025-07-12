@@ -3,48 +3,43 @@ import { join } from 'path'
 import { xpRange } from '../lib/levelling.js'
 
 const tags = {
-  serbot: '✐ Sockets',
-  eco: '✦ Economía', 
-  downloader: '☄︎ Downloaders',
-  tools: 'ᥫ᭡ Herramientas',
-  owner: '✧ Owner',
-  info: '❀ Info',
-  gacha: '☀︎ Gacha Anime', 
-  group: '꒷ Grupos',
-  search: '✧ Buscadores',
-  sticker: '✐ Stickers',
-  ia: 'ᰔ IA',
-  channel: '✿ Channels', 
+  serbot: '🛜 Sub Bots',
+  eco: '💰 Economía', 
+  downloader: '⬇️ Descargas',
+  tools: '🧰 Herramientas',
+  owner: '👑 Creador',
+  info: '📚 Información',
+  gacha: '🎲 Gacha Anime', 
+  group: '👥 Grupos',
+  search: '🔎 Búsquedas',
+  sticker: '🎨 Stickers',
+  ia: '🤖 IA',
+  channel: '📢 Canales' 
 }
 
 const defaultMenu = {
   before: `
-*⌬ .・。.・゜✭・.・✫・゜・。. ⌬*
+┏━━━━━━━━━━━━━━━━━━┓
+┃  🤖 *%botname* [ %tipo ]
+┃  👤 Hola, *%name*
+┃  ⏱ Activo hace: *%uptime*
+┃  📅 Fecha: *%date*
+┗━━━━━━━━━━━━━━━━━━┛
 
-∘₊✧ *Hola, soy %botname*
-( %tipo )
+🎨 Personaliza tu subbot:
+  • .setname
+  • .setbanner
 
-꒷︶꒷‧₊˚ ¿Qué tal *%name*? ˚₊‧꒷︶꒷
-𓆩 Actividad » *%uptime*
-𓆩 Fecha » *%date*
+🌐 API oficial:
+  https://theadonix-api.vercel.app
 
-> ✐ Puedes personalizar tu socket:
-> ⤿ *.setname* ← Cambiar nombre
-> ⤿ *.setbanner* ← Cambiar banner
-
-∘₊✧ *Adonix API Oficial:*
-> ❀ https://theadonix-api.vercel.app
-
-*⌬ .・。.・゜✭・.・✫・゜・。. ⌬*
-
-\`⌬ ꒰ Menú de Comandos ꒱ ⌬\`
-
+── ⬤ Menú de Comandos ⬤ ──
 %readmore`.trimStart(),
 
-  header: '\n*꒷︶꒷꒥꒷‧₊˚ %category*',
-  body: '> ⤿ %cmd %islimit %isPremium',
-  footer: '*꒷꒦꒷꒦꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷꒷*',
-  after: '\n✦ 𓆩 *Made By 𝗪𝗶𝗿𝗸* ☁︎',
+  header: '\n╭─「 %category 」',
+  body: '│ ◦ %cmd %islimit %isPremium',
+  footer: '╰───────────────',
+  after: '\n📌 *Creado por 𝗪𝗶𝗿𝗸*',
 }
 
 const handler = async (m, { conn, usedPrefix: _p }) => {
@@ -79,14 +74,11 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
         if (config.name) nombreBot = config.name
         if (config.banner) bannerFinal = config.banner
       } catch (err) {
-        console.log('⚠️ No se pudo leer config del subbot:', err)
+        console.log('⚠️ Error al leer config:', err)
       }
     }
 
-    const tipo = botActual === '+573147172161'.replace(/\D/g, '')
-      ? 'Principal 🅥'
-      : 'Sub Bot 🅑'
-
+    const tipo = botActual === '+573147172161'.replace(/\D/g, '') ? 'Bot Principal 🟢' : 'Sub Bot 🟡'
     const menuConfig = conn.menu || defaultMenu
 
     const _text = [
@@ -98,12 +90,11 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
             menu.help.map(helpText =>
               menuConfig.body
                 .replace(/%cmd/g, menu.prefix ? helpText : `${_p}${helpText}`)
-                .replace(/%islimit/g, menu.limit ? '◜⭐◞' : '')
-                .replace(/%isPremium/g, menu.premium ? '◜🪪◞' : '')
-                .trim()
+                .replace(/%islimit/g, menu.limit ? '🔒' : '')
+                .replace(/%isPremium/g, menu.premium ? '💎' : '')
             ).join('\n')
           ).join('\n'),
-          menuConfig.footer,
+          menuConfig.footer
         ].join('\n')
       }),
       menuConfig.after
@@ -133,7 +124,7 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
       (_, name) => String(replace[name])
     )
 
-    const isURL = typeof bannerFinal === 'string' && /^https?:\/\//i.test(bannerFinal)
+    const isURL = typeof bannerFinal === 'string' && /^https?:\/+/.test(bannerFinal)
     const imageContent = isURL
       ? { image: { url: bannerFinal } }
       : { image: fs.readFileSync(bannerFinal) }
@@ -141,13 +132,12 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
     await conn.sendMessage(m.chat, {
       ...imageContent,
       caption: text.trim(),
-      mentionedJid: conn.parseMention(text),
-      ...rcanal
+      mentionedJid: conn.parseMention(text)
     }, { quoted: m })
 
   } catch (e) {
     console.error('❌ Error en el menú:', e)
-    conn.reply(m.chat, '❎ Lo sentimos, el menú tiene un error.', m)
+    conn.reply(m.chat, '❎ Error al mostrar el menú.', m)
   }
 }
 
@@ -155,7 +145,6 @@ handler.command = ['menu', 'help', 'menú']
 handler.register = true
 export default handler
 
-// Utilidades
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
@@ -170,13 +159,13 @@ const ase = new Date()
 let hour = ase.getHours()
 
 const greetingMap = {
-  0: 'una linda noche 🌙', 1: 'una linda noche 💤', 2: 'una linda noche 🦉',
-  3: 'una linda mañana ✨', 4: 'una linda mañana 💫', 5: 'una linda mañana 🌅',
-  6: 'una linda mañana 🌄', 7: 'una linda mañana 🌅', 8: 'una linda mañana 💫',
-  9: 'una linda mañana ✨', 10: 'un lindo día 🌞', 11: 'un lindo día 🌨',
-  12: 'un lindo día ❄', 13: 'un lindo día 🌤', 14: 'una linda tarde 🌇',
-  15: 'una linda tarde 🥀', 16: 'una linda tarde 🌹', 17: 'una linda tarde 🌆',
-  18: 'una linda noche 🌙', 19: 'una linda noche 🌃', 20: 'una linda noche 🌌',
-  21: 'una linda noche 🌃', 22: 'una linda noche 🌙', 23: 'una linda noche 🌃',
+  0: 'una noche tranquila 🌙', 1: 'una noche tranquila 🌌', 2: 'una noche relajada 🌠',
+  3: 'una madrugada fresca 🌙', 4: 'una madrugada estrellada ✨', 5: 'una mañana radiante 🌅',
+  6: 'una mañana brillante 🌄', 7: 'una mañana activa ☕', 8: 'una mañana positiva 💫',
+  9: 'un día genial 🌞', 10: 'un día productivo 💼', 11: 'un día lleno de energía ⚡',
+  12: 'una tarde soleada ☀️', 13: 'una tarde creativa 🎨', 14: 'una tarde inspiradora 📖',
+  15: 'una tarde relajada 🧘', 16: 'una tarde activa 🏃', 17: 'una tarde luminosa 🌇',
+  18: 'una noche calmada 🌃', 19: 'una noche bonita 🌙', 20: 'una noche encantadora 🌌',
+  21: 'una noche serena 🌙', 22: 'una noche mágica 🌠', 23: 'una noche pacífica 🌃'
 }
-var greeting = 'espero que tengas ' + (greetingMap[hour] || 'un buen día')
+var greeting = 'espero que tengas ' + (greetingMap[hour] || 'un excelente día')
