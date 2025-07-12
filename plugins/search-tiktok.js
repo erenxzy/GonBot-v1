@@ -12,7 +12,7 @@ ${usedPrefix + command} baile divertido
 
   await m.react('🕓')
 
-  let img = './storage/img/menu.jpg'
+  let img = 'https://files.catbox.moe/zgqzfy.jpg'
 
   // Sacar nombre del sub-bot si tiene config
   let nombreBot = global.namebot || '✧ GONBOT-MD ✧'
