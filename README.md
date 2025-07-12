@@ -30,46 +30,58 @@
 <a
 href="https://www.mediafire.com/file/3hsvi3xkpq3a64o/termux_118.a"><img src="https://qu.ax/finc.jpg" height="125px"></a>
 
-# *Instalación en Termux*
+### **`➮ Instalación por termux`**
 
 <details>
-  <summary><b>*Guía de Instalación Paso a Paso*</b></summary>
+ <summary><b> ✎ Click para ver los Comandos </b></summary>
 
-  1.  `termux-setup-storage`
-  2.  `pkg update -y && pkg upgrade -y`
-  3.  `pkg install git nodejs ffmpeg imagemagick yarn -y`
-  4.  `git clone https://github.com/Deylin-Eliac/Kirito-Bot-MD`
-  5.  `cd Kirito-Bot-MD`
-  6.  `yarn install`
-  7.  `yarn start`
+### **❀ Instalación manual por termux**
+> Nota: Copie y pegue los comandos en termux uno por uno.
+```bash
+termux-setup-storage
+```
 
-  *Nota:* Los errores en rojo durante el escaneo del código QR son normales.
+```bash
+apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
+```
 
-  *Reiniciar el bot:*
+```bash
+git clone https://github.com/The-King-Destroy/Yuki_Suou-Bot && cd Yuki_Suou-Bot
+```
 
-  ```bash
-  cd Kirito-Bot-MD
-  yarn start
-  ```
+```bash
+yarn install
+```
 
-  *Escanear un nuevo código QR:*
+```bash
+npm install
+```
 
-  ```bash
-  cd Kirito-Bot-MD
-  rm -rf kiritoSession
-  yarn start
-  ```
+```bash
+npm update
+```
 
-  *Mantener el bot activo en segundo plano:*
+```bash
+npm start
+```
 
-  ```bash
-  npm i -g pm2
-  pm2 start index.js
-  pm2 save
-  pm2 logs
-  ```
-</details>
+> Si aparece (Y/I/N/O/D/Z) [default=N] ? use la letra "y" + "ENTER" para continuar con la instalación
 
+### **🜸 Activar en caso de detenerse en termux**
+
+> Si después de instalar el bot en Termux se detiene (pantalla en blanco, pérdida de conexión a Internet, reinicio del dispositivo), sigue estos pasos:
+
+❒ Abre Termux y navega al directorio del bot:
+   
+   ```bash
+    cd Yuki_Suou-Bot
+   ```
+
+❒ Inicia el bot nuevamente:
+  
+   ```bash
+    npm start
+   ```
 ---
 
 # *Comunidad*
