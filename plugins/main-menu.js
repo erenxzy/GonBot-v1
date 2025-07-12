@@ -4,12 +4,12 @@ const handler = async (m, { conn }) => {
     const date = new Date().toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'numeric' })
     const uptime = clockString(process.uptime() * 1000)
     const nombreBot = global.namebot || 'ɢᴏɴʙᴏᴛ-ᴠ1'
-    const tipo = conn.user?.jid?.includes('3147172161') ? 'Bot Principal 🟢' : 'Sub Bot 🟡'
+    const tipo = conn.user?.jid?.includes('3147172161') ? 'Bot Principal 🟢' : '𝘽𝙤𝙩 𝙋𝙧𝙞𝙣𝙘𝙞𝙥𝙖𝙡 ☄️'
     const bannerURL = 'https://cdn.russellxz.click/0e418398.png' // URL del banner
 
     let header = `
 ┏━━━━━━━━━━━━━━━━━━┓
-┃  🤖 *${nombreBot}* [ Bot principal]
+┃  🤖 *${nombreBot}* [𝘽𝙤𝙩 𝙋𝙧𝙞𝙣𝙘𝙞𝙥𝙖𝙡 ☄️]
 ┃  👤 𝙃𝙤𝙡𝙖, *${name}*
 ┃  ⏱️ 𝘼𝙘𝙩𝙞𝙫𝙤 𝙃𝙖𝙘𝙚: *${uptime}*
 ┃  📅 𝙁𝙚𝙘𝙝𝙖: *${date}*
@@ -19,6 +19,9 @@ const handler = async (m, { conn }) => {
 ${header}
 
 ── ⬤𝙈𝙀𝙉𝙐 𝘿𝙀 𝘾𝙊𝙈𝘼𝙉𝘋𝙊⬤ ──
+
+> ᴍᴀs ɪɴғᴏ ᴅᴇ ɢᴏɴʙᴏᴛ-ᴠ1 
+https://erenxsit.vercel.app
 
 ╭─「 🔰 𝙎𝙐𝘽-𝘽𝙊𝙏𝙎 」
 │ ✎ .bots  
@@ -128,7 +131,7 @@ ${header}
 │ ✎ .nuevadescchannel  
 ╰───────────────
 
-> 📌 ᴅᴇsᴀʀʀᴏʟʟᴀᴅᴏ ᴘᴏʀ ᴘʀᴏʏᴇᴄᴛ ɢᴏɴʙᴏᴛᴠ1`.trim()
+🚀 ᴅᴇsᴀʀʀᴏʟʟᴀᴅᴏ ᴘᴏʀ ᴘʀᴏʏᴇᴄᴛ ɢᴏɴʙᴏᴛᴠ1`.trim()
 
     await conn.sendMessage(m.chat, {
       image: { url: bannerURL },
