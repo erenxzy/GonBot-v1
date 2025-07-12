@@ -12,13 +12,13 @@
   "scripts": {
     "start": "node index.js"
   },
-  "homepage": "https://github.com/Ado-rgb/Michi-Wa",
+  "homepage": "https://github.com/erenxzy/GonBot-v1",
   "author": {
     "name": "erenxszy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ado-rgb/Michi-Wa.git"
+    "url": "git+https://github.com/erenxzy/GonBot-v1.git"
   },
   "bugs": {
     "url": "https://github.com/Ado-rgb/Michi-Wa/issues"
