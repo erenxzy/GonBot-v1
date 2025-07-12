@@ -8,7 +8,6 @@
 
 ---
 ### **`✧ Info De GonBot ✧`**
-<a
 > Bot inspirado Por Un Anime Y tambiém Por mis coloboradores Súper bot Actualizado Para WhatsApp 2025.
 
 *   *Desarrollador:* erenxzy
