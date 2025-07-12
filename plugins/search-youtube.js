@@ -15,7 +15,7 @@ let handler = async (m, { conn, usedPrefix, text, command }) => {
   const botJid = conn.user?.jid?.split('@')[0].replace(/\D/g, '')
   const configPath = path.join('./JadiBots', botJid, 'config.json')
 
-  let nombreBot = global.namebot || '✦ Michi-Wa ✦'
+  let nombreBot = global.namebot || '✦ GONBOT-MD ✦'
   if (fs.existsSync(configPath)) {
     try {
       const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'))
