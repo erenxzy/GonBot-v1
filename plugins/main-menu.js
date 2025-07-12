@@ -4,17 +4,17 @@ import { xpRange } from '../lib/levelling.js'
 
 const tags = {
   serbot: '🛜 𝙎𝙐𝘽-𝘽𝙊𝙏𝙎',
-  eco: '💰 𝙀𝘾𝙊𝙉𝙊𝙈𝙄𝘼', 
+  eco: '💰 𝙀𝘾𝙊𝙉𝙊𝙈𝙄𝘼',
   downloader: '⬇️ 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼',
   tools: '🧰 𝙃𝙀𝙍𝘼𝙈𝙄𝙀𝙉𝙏𝘼𝙎',
   owner: '👑 𝘾𝙍𝙀𝘼𝘿𝙊𝙍',
   info: '📚 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝘾𝙄𝙊𝙉',
-  gacha: '🎲 𝙂𝘼𝘾𝙃𝘼 𝘼𝙉𝙄𝙈𝙀', 
+  gacha: '🎲 𝙂𝘼𝘾𝙃𝘼 𝘼𝙉𝙄𝙈𝙀',
   group: '👥 𝙂𝙍𝙐𝙋𝙊',
   search: '🔎 𝘽𝙐𝙎𝙌𝙐𝙀𝘿𝘼',
   sticker: '🎨 𝙎𝙏𝙄𝘾𝙆𝙀𝙍',
   ia: '🤖 𝙄𝘼',
-  channel: '📢 𝘾𝘼𝙉𝘼𝙇𝙀𝙎' 
+  channel: '📢 𝘾𝘼𝙉𝘼𝙇𝙀𝙎'
 }
 
 const defaultMenu = {
@@ -37,7 +37,7 @@ const defaultMenu = {
 %readmore`.trimStart(),
 
   header: '\n╭─「 %category 」',
-  body: '│ ✎ %cmd %islimit %isPremium',
+  body: '│ ◦ %cmd %islimit %isPremium',
   footer: '╰───────────────',
   after: '\n 📌 ᴅᴇsᴀʀᴏʟʟᴀᴅᴏ ᴘᴏʀ ᴘʀᴏʏᴇᴄᴛ ɢᴏɴʙᴏᴛᴠ1',
 }
@@ -124,10 +124,15 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
       (_, name) => String(replace[name])
     )
 
-    const isURL = typeof bannerFinal === 'string' && /^https?:\/+/.test(bannerFinal)
-    const imageContent = isURL
-      ? { image: { url: bannerFinal } }
-      : { image: fs.readFileSync(bannerFinal) }
+    // 🖼️ SOPORTE PARA URL o RUTA LOCAL
+    let imageContent
+    if (typeof bannerFinal === 'string' && /^https?:\/\//.test(bannerFinal)) {
+      imageContent = { image: { url: bannerFinal } }
+    } else if (fs.existsSync(bannerFinal)) {
+      imageContent = { image: fs.readFileSync(bannerFinal) }
+    } else {
+      imageContent = { image: { url: 'https://cdn.russellxz.click/2dd96cc1.jpeg' } } // imagen por defecto
+    }
 
     await conn.sendMessage(m.chat, {
       ...imageContent,
