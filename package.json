@@ -1,7 +1,7 @@
 {
-  "name": "Michi-WaBot-MD",
+  "name": "GonBotv1",
   "version": "1.0.0",
-  "description": "Michi Multi Device",
+  "description": "By Proyect GonBotv1",
   "main": "index.js",
   "type": "module",
   "directories": {
