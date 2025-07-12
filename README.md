@@ -5,4 +5,4 @@
 <p align="center">
   <img src="https://files.catbox.moe/zgqzfy.jpg" width="250"/>
 </p>
-
+# Este Bot Estará Pronto Lanzado Para Termux Si Te Gusta Nuestro Proyecto Deja Una Estrella 🌟
