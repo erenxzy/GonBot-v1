@@ -66,6 +66,6 @@ npm start
 <a href="https://github.com/Elder504">
 <img src="https://github.com/Elder504.png" " width="150" heith="150" alt="𝙀𝙡𝙙𝙚𝙧504"/>  </a>
 
-### **`Desarrollador`**
+### **`Propetario`**
 <a href="https://github.com/Elder504">
 <img src="https://github.com/Elder504.png" " width="150" heith="150" alt="𝙀𝙡𝙙𝙚𝙧504"/>  </a>
