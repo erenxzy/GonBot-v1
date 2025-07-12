@@ -3,43 +3,43 @@ import { join } from 'path'
 import { xpRange } from '../lib/levelling.js'
 
 const tags = {
-  serbot: '🛜 Sub Bots',
-  eco: '💰 Economía', 
-  downloader: '⬇️ Descargas',
-  tools: '🧰 Herramientas',
-  owner: '👑 Creador',
-  info: '📚 Información',
-  gacha: '🎲 Gacha Anime', 
-  group: '👥 Grupos',
-  search: '🔎 Búsquedas',
-  sticker: '🎨 Stickers',
-  ia: '🤖 IA',
-  channel: '📢 Canales' 
+  serbot: '🛜 𝙎𝙐𝘽-𝘽𝙊𝙏𝙎',
+  eco: '💰 𝙀𝘾𝙊𝙉𝙊𝙈𝙄𝘼', 
+  downloader: '⬇️ 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼',
+  tools: '🧰 𝙃𝙀𝙍𝘼𝙈𝙄𝙀𝙉𝙏𝘼𝙎',
+  owner: '👑 𝘾𝙍𝙀𝘼𝘿𝙊𝙍',
+  info: '📚 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝘾𝙄𝙊𝙉',
+  gacha: '🎲 𝙂𝘼𝘾𝙃𝘼 𝘼𝙉𝙄𝙈𝙀', 
+  group: '👥 𝙂𝙍𝙐𝙋𝙊',
+  search: '🔎 𝘽𝙐𝙎𝙌𝙐𝙀𝘿𝘼',
+  sticker: '🎨 𝙎𝙏𝙄𝘾𝙆𝙀𝙍',
+  ia: '🤖 𝙄𝘼',
+  channel: '📢 𝘾𝘼𝙉𝘼𝙇𝙀𝙎' 
 }
 
 const defaultMenu = {
   before: `
 ┏━━━━━━━━━━━━━━━━━━┓
 ┃  🤖 *%botname* [ %tipo ]
-┃  👤 Hola, *%name*
-┃  ⏱ Activo hace: *%uptime*
-┃  📅 Fecha: *%date*
+┃  👤 𝙃𝙤𝙡𝙖, *%name*
+┃  ⏱️ 𝘼𝙘𝙩𝙞𝙫𝙤 𝙃𝙖𝙘𝙚: *%uptime*
+┃  📅 𝙁𝙚𝙘𝙝𝙖: *%date*
 ┗━━━━━━━━━━━━━━━━━━┛
 
-🎨 Personaliza tu subbot:
+🔰 Personaliza tu subbot:
   • .setname
   • .setbanner
 
-🌐 API oficial:
-  https://theadonix-api.vercel.app
+> Más info Sobre GonBotv1:
+  https://erenxsit.vercel.app
 
-── ⬤ Menú de Comandos ⬤ ──
+── ⬤𝙈𝙀𝙉𝙐 𝘿𝙀 𝘾𝙊𝙈𝘼𝙉𝘿𝙊⬤ ──
 %readmore`.trimStart(),
 
   header: '\n╭─「 %category 」',
   body: '│ ◦ %cmd %islimit %isPremium',
   footer: '╰───────────────',
-  after: '\n📌 *Creado por 𝗪𝗶𝗿𝗸*',
+  after: '\n 📌 ᴅᴇsᴀʀᴏʟʟᴀᴅᴏ ᴘᴏʀ ᴘʀᴏʏᴇᴄᴛ ɢᴏɴʙᴏᴛᴠ1',
 }
 
 const handler = async (m, { conn, usedPrefix: _p }) => {
