@@ -52,7 +52,7 @@ const handler = async (m, { conn, text, command }) => {
           buttons: [{
             name: 'cta_url',
             buttonParamsJson: JSON.stringify({
-              display_text: '🌐 Ver imagen completa',
+              display_text: '🔥 Ver imagen completa',
               url: link
             })
           }]
