@@ -18,7 +18,7 @@ let crm4 = "IF9hdXRvcmVzcG9uZGVyLmpzIGluZm8tYm90Lmpz"
 let drm1 = ""
 let drm2 = ""
 let rtx = `
-🧩 *Opción 1: Escanear código QR*
+🔰 *Opción 1: Escanear código QR*
 
 *Vincula tu WhatsApp escaneando el código QR:*
 
@@ -27,11 +27,11 @@ let rtx = `
 > 3. Presiona "Vincular un dispositivo".
 > 4. Escanea el código QR que aparecerá aquí.
 
-*Sub-bot* \`Michi Wa\` 
+*Sub-bot* \`GonBotv1\` 
 `.trim()
 
 let rtx2 = `
-🧩 *Opción 2: Usar código manual*
+🔰 *Opción 2: Usar código manual*
 
 *Vincula tu WhatsApp con un código de 8 dígitos:*
 
@@ -45,7 +45,7 @@ Se recomienda solicitarlo por privado al bot para mayor efectividad.
 
 \`🕒 Importante: El código es válido solo para este número.\`
 
-*Sub-bot Michi Wa*
+*Sub-bot GonBotv1*
 `.trim()
 
 const __filename = fileURLToPath(import.meta.url)
