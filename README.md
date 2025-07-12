@@ -3,6 +3,6 @@
 <p align="center"><i>🚀 sᴜᴘᴇʀ ʙᴏᴛ ᴀᴄᴛᴜᴀʟɪᴢᴀᴅᴏ ᴘᴀʀᴀ ᴡʜᴀᴛsᴀᴘᴘ 🚀</i></p>
 
 <p align="center">
-  <img src="https://files.catbox.moe/zgqzfy.jpg" width="600"/>
+  <img src="https://files.catbox.moe/zgqzfy.jpg" width="400"/>
 </p>
 
