@@ -68,4 +68,4 @@ npm start
 
 ### **`Propetario`**
 <a href="https://github.com/erenxzy">
-<img src="https://github.com/erenxzy.png" " width="150" heith="150" alt="𝙀𝙡𝙙𝙚𝙧504"/>  </a>
+<img src="https://github.com/erenxzy.png" " width="150" heith="150" alt="erenxzy"/>  </a>
