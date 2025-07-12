@@ -4,17 +4,17 @@ import { xpRange } from '../lib/levelling.js'
 
 const tags = {
   serbot: '🛜 𝙎𝙐𝘽-𝘽𝙊𝙏𝙎',
-  eco: '💰 𝙀𝘾𝙊𝙉𝙊𝙈𝙄𝘼',
+  eco: '💰 𝙀𝘾𝙊𝙉𝙊𝙈𝙄𝘼', 
   downloader: '⬇️ 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼',
   tools: '🧰 𝙃𝙀𝙍𝘼𝙈𝙄𝙀𝙉𝙏𝘼𝙎',
   owner: '👑 𝘾𝙍𝙀𝘼𝘿𝙊𝙍',
   info: '📚 𝙄𝙉𝙁𝙊𝙍𝙈𝘼𝘾𝙄𝙊𝙉',
-  gacha: '🎲 𝙂𝘼𝘾𝙃𝘼 𝘼𝙉𝙄𝙈𝙀',
+  gacha: '🎲 𝙂𝘼𝘾𝙃𝘼 𝘼𝙉𝙄𝙈𝙀', 
   group: '👥 𝙂𝙍𝙐𝙋𝙊',
-  search: '🔎 𝘽𝙐𝙎𝙌𝙐𝙀𝘿𝘼',
+  search: '🔎 𝘽𝙐𝙎𝙌𝙀𝘿𝘼',
   sticker: '🎨 𝙎𝙏𝙄𝘾𝙆𝙀𝙍',
   ia: '🤖 𝙄𝘼',
-  channel: '📢 𝘾𝘼𝙉𝘼𝙇𝙀𝙎'
+  channel: '📢 𝘾𝘼𝙉𝘼𝙇𝙀𝙎' 
 }
 
 const defaultMenu = {
@@ -37,7 +37,7 @@ const defaultMenu = {
 %readmore`.trimStart(),
 
   header: '\n╭─「 %category 」',
-  body: '│ ✎ %cmd %islimit %isPremium',
+  body: '│ ◦ %cmd %islimit %isPremium',
   footer: '╰───────────────',
   after: '\n 📌 ᴅᴇsᴀʀᴏʟʟᴀᴅᴏ ᴘᴏʀ ᴘʀᴏʏᴇᴄᴛ ɢᴏɴʙᴏᴛᴠ1',
 }
@@ -63,21 +63,9 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
       }))
 
     let nombreBot = global.namebot || 'Bot'
-    let bannerFinal = './storage/img/menu.jpg'
+    let bannerFinal = 'https://cdn.russellxz.click/0e418398.png'
 
     const botActual = conn.user?.jid?.split('@')[0].replace(/\D/g, '')
-    const configPath = join('./JadiBots', botActual, 'config.json')
-
-    if (fs.existsSync(configPath)) {
-      try {
-        const config = JSON.parse(fs.readFileSync(configPath))
-        if (config.name) nombreBot = config.name
-        if (config.banner) bannerFinal = config.banner
-      } catch (err) {
-        console.log('⚠️ Error al leer config:', err)
-      }
-    }
-
     const tipo = botActual === '+573147172161'.replace(/\D/g, '') ? 'Bot Principal 🟢' : 'Sub Bot 🟡'
     const menuConfig = conn.menu || defaultMenu
 
@@ -124,15 +112,7 @@ const handler = async (m, { conn, usedPrefix: _p }) => {
       (_, name) => String(replace[name])
     )
 
-    // 🖼️ SOPORTE PARA URL o RUTA LOCAL
-    let imageContent
-    if (typeof bannerFinal === 'string' && /^https?:\/\//.test(bannerFinal)) {
-      imageContent = { image: { url: bannerFinal } }
-    } else if (fs.existsSync(bannerFinal)) {
-      imageContent = { image: fs.readFileSync(bannerFinal) }
-    } else {
-      imageContent = { image: { url: 'https://cdn.russellxz.click/2dd96cc1.jpeg' } } // imagen por defecto
-    }
+    const imageContent = { image: { url: bannerFinal } }
 
     await conn.sendMessage(m.chat, {
       ...imageContent,
