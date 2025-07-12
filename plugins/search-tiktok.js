@@ -15,7 +15,7 @@ ${usedPrefix + command} baile divertido
   let img = './storage/img/menu.jpg'
 
   // Sacar nombre del sub-bot si tiene config
-  let nombreBot = global.namebot || '✧ Michi - Wa ✧'
+  let nombreBot = global.namebot || '✧ GONBOT-MD ✧'
   try {
     const botActual = conn.user?.jid?.split('@')[0].replace(/\D/g, '')
     const configPath = path.join('./JadiBots', botActual, 'config.json')
